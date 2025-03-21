@@ -117,7 +117,7 @@ for country in filtered_data_transposed.columns:
             )  # plot best fit line
 
 
-ax.set_title('Temperature Change Over Time')
+ax.set_title('Change in Temperature Over Time')
 ax.set_xlabel('Year')
 ax.set_ylabel('Temperature Change (°C)')
 ax.legend(title='Country', bbox_to_anchor=(1.05, 1), loc='upper left')
@@ -140,5 +140,25 @@ st.write("According to our research, rising temperatures from climate change for
 st.divider()
 
 ##Next Factor
+st.markdown("**Invasive Species**")
+df3 = pd.read_csv("data/invasive_species_population_millions(invasive_species_population_mil).csv")
+
+st.line_chart(df3, x_label="Year", y_label="Invasive Species Population (Millions)", color= "#efa190")
+
+#info column
+colx, coly = st.columns([0.4, 0.6])
+with colx:
+    with st.expander("What are **invasive species**?", icon='🤔'):
+        st.write("Invasive species are introduced, nonnative organism (disease, parasite, plant, or animal) that "
+                 "begins to spread from the site of its original introduction. They often "
+                 "outcompete native species for resources, leading to reduced biodiversity and altered habitats.")
+        st.image("https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/masonry/public/lionfish.jpg?itok=AMlU21_u")
+        st.caption("Invasive Adult Lionfish")
+
+with coly:
+    st.write("In the graph, it can be seen that the global invasive species population has been **increasing**. ")
+    st.write("An increase in invasive species would then lead to a rise in extinction. This happens because more "
+             "invasive species mean more competition, predation, habitat destruction, and disease spread—all of which "
+             "put native species at risk.")
 
 
