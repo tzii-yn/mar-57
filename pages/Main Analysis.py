@@ -107,9 +107,9 @@ fig, ax = plt.subplots(figsize=(10, 6))
 for country in filtered_data_transposed.columns:
     ax.plot(filtered_data_transposed.index, filtered_data_transposed[country], label=country)
 
-ax.title('Temperature Change Over Time')
-ax.xlabel('Year')
-ax.ylabel('Temperature Change (°C)')
+ax.set_title('Temperature Change Over Time')
+ax.set_xlabel('Year')
+ax.set_ylabel('Temperature Change (°C)')
 ax.legend(title='Country', bbox_to_anchor=(1.05, 1), loc='upper left')
 ax.grid(True)
 ax.pyplot(fig)
