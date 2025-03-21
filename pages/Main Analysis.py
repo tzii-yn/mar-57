@@ -71,4 +71,10 @@ st.divider()
 st.subheader("Potential Factors")
 st.markdown("**Climate Change**")
 
+#data from 1961, 2023
+df2 = pd.read_csv('data/Annual_Surface_Temperature_Change.csv')
 
+#world temperature
+world_data = df2[df2.Country == 'World'].loc[:,'F2010':'F2014']
+
+st.line_chart(world_data, x_label='Year', y_label='Temperature')
