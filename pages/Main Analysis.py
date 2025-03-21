@@ -110,7 +110,7 @@ for country in filtered_data_transposed.columns:
                 x=filtered_data_transposed.index,
                 y=filtered_data_transposed[country],
                 label="Best Fit Line",
-                color='lightcyan'
+                color='midnightblue'
                 )  # plot best fit line
 
 ax.set_title('Temperature Change Over Time')
