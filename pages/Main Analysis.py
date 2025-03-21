@@ -107,7 +107,7 @@ fig1, ax = plt.subplots(figsize=(10, 6))
 count = 0
 for country in filtered_data_transposed.columns:
     ax.plot(filtered_data_transposed.index, filtered_data_transposed[country], label=country)
-    if count == 1: #plot best fit line once
+    if count == 0: #plot best fit line once
         sns.regplot(filtered_data_transposed,
                 x=filtered_data_transposed.index,
                 y=filtered_data_transposed[country],
