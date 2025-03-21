@@ -81,20 +81,25 @@ column_names = df2.columns
 new_columns = []
 for x in column_names:
     if x == 'Country':
-        new_columns.append(x)  # Keep 'Country' as is
+        new_columns.append(x)
     else:
         new_columns.append(x.replace('F', ''))
 
 df2.columns = new_columns
 
-#dropdown to select country
+#multiselect
 countries = df2['Country'].unique()
-selected_country = st.selectbox('Select a Country', countries)
+selected_country = st.multiselect('Select Countries', countries, default=countries[0])
 
 # Filter data based on selected country
-filtered_data = df2[df2['Country'] == selected_country]
+filtered_data = df2[df2['Country'].isin(selected_country)]
 
+df2.transpose()
 #world temperature
 # world_data = df2[df2.Country == 'World'].loc[:,'F2010':'F2014']
 
 st.line_chart(data=filtered_data, x_label='Year', y_label='Temperature')
+
+st.write("According to our research, rising temperatures from climate change force species beyond their thermal "
+         "limits, causing habitat loss, disrupting ecological relationships, and increasing disease exposure, "
+         "all of which contribute to higher extinction rates.")
