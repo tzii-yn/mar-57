@@ -38,7 +38,7 @@ st.divider()
 ### OVERVIEW PAGE ###
 
 st.markdown("Species are classified as: **EX** - Extinct, **EW** - Extinct in the Wild, **CR** - Critically Endangered, **EN** - Endangered, **VU** - Vulnerable, **NT** - Near Threatened, **DD** - Data Deficient, **LC** - Least Concern, **PE** - Possibly Extinct, **PEW** - Possibly Extinct in Wild")
-st.write("Click on the individual points to understand more about the animal in Google")
+st.caption("Click on the individual points to understand more about the animal in Google")
 
 
 #cleaning the file

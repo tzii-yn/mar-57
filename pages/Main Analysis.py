@@ -127,6 +127,7 @@ ax.legend(title='Country', bbox_to_anchor=(1.05, 1), loc='upper left')
 ax.grid(True)
 
 st.pyplot(fig1)
+
 st.link_button(":small[:gray[Retrieved from IMF Climate Change Dashboard]]",
   "https://climatedata.imf.org/pages/climatechange-data",
   type="tertiary",
