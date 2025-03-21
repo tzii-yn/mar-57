@@ -161,4 +161,7 @@ with coly:
              "invasive species mean more competition, predation, habitat destruction, and disease spread—all of which "
              "put native species at risk.")
 
+st.divider()
 
+st.subheader("Conclusion")
+st.write("In conclusion, the decline of endangered animals is a pressing issue driven by various human and environmental factors. Climate change, distruption of ecosystems due to invasive species habitat destruction for urbanisation have all contributed to the rapid decrease in wildlife populations. Our findings highlight the urgent need for conservation efforts, stricter regulations, and public awareness to protect these species from extinction. By addressing these threats and promoting sustainable practices, we can help preserve biodiversity and ensure a balanced ecosystem for future generations.")
