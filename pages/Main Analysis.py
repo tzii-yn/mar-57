@@ -88,13 +88,13 @@ for x in column_names:
 
 df2.columns = new_columns
 
-#multiselect
+#singleselect
 countries = df2['Country'].unique()
 default_countries = ["World"] if "World" in countries else [countries[0]]
-selected_country = st.multiselect('Select Countries', countries, default=default_countries)
+selected_country = st.selectbox('Select a Country', countries, index=countries.tolist().index(default_countries))
 
 #filter data based on selected country
-filtered_data = df2[df2['Country'].isin(selected_country)]
+filtered_data = df2[df2['Country'] == selected_country]
 
 #set country as index
 filtered_data_transposed = filtered_data.set_index('Country').T
@@ -106,19 +106,15 @@ filtered_data_transposed.index = filtered_data_transposed.index.astype(int)
 # world_data = df2[df2.Country == 'World'].loc[:,'F2010':'F2014']
 fig1, ax = plt.subplots(figsize=(10, 6))
 
-count = 0
 for country in filtered_data_transposed.columns:
     ax.plot(filtered_data_transposed.index, filtered_data_transposed[country], label=country)
-    if count == 0: #plot best fit line once
-        sns.regplot(filtered_data_transposed,
-                x=filtered_data_transposed.index,
-                y=filtered_data_transposed[country],
-                label="Best Fit Line",
-                color='peachpuff'
-                )  # plot best fit line
-        count += 1
-    else:
-        pass
+    sns.regplot(filtered_data_transposed,
+            x=filtered_data_transposed.index,
+            y=filtered_data_transposed[country],
+            label="Best Fit Line",
+            color='peachpuff'
+            )  # plot best fit line
+
 
 ax.set_title('Temperature Change Over Time')
 ax.set_xlabel('Year')
@@ -126,7 +122,7 @@ ax.set_ylabel('Temperature Change (°C)')
 ax.legend(title='Country', bbox_to_anchor=(1.05, 1), loc='upper left')
 ax.grid(True)
 
-st.pyplot(fig1)
+st.pyplot(fig1, clear_figure=True)
 
 st.link_button(":small[:gray[Retrieved from IMF Climate Change Dashboard]]",
   "https://climatedata.imf.org/pages/climatechange-data",
