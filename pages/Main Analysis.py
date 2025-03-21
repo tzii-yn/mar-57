@@ -167,7 +167,8 @@ st.subheader("Conclusion")
 col3, col4 = st.columns([0.5, 0.5])
 with col3:
     st.write(
-        "Regulatory Methods: \nProtected Areas: Establishing national parks and wildlife reserves. \nAnti-Poaching Laws: Stricter penalties and use of surveillance technology (e.g., drones, tracking systems). \nInternational Agreements: Enforcement of treaties like CITES to regulate wildlife trade.\nPublic Education & Community Involvement: Raising awareness and promoting sustainable practices."
+        "Regulatory Methods: "
+        "\nProtected Areas: Establishing national parks and wildlife reserves. \nAnti-Poaching Laws: Stricter penalties and use of surveillance technology (e.g., drones, tracking systems). \nInternational Agreements: Enforcement of treaties like CITES to regulate wildlife trade.\nPublic Education & Community Involvement: Raising awareness and promoting sustainable practices."
     )
 
 with col4:
