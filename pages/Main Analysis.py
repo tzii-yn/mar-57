@@ -143,7 +143,7 @@ st.divider()
 st.markdown("**Invasive Species**")
 df3 = pd.read_csv("data/invasive_species_population_millions(invasive_species_population_mil).csv")
 
-st.line_chart(df3, x="Year", y="Invasive Species (Global) Population Estimate (Millions)", color="#efa190")
+st.line_chart(df3, x="Year", y="Invasive Species Population (Millions)", color="#efa190")
 
 #info column
 colx, coly = st.columns([0.4, 0.6])
