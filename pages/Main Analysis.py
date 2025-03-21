@@ -106,6 +106,7 @@ fig1, ax = plt.subplots(figsize=(10, 6))
 
 for country in filtered_data_transposed.columns:
     ax.plot(filtered_data_transposed.index, filtered_data_transposed[country], label=country)
+    sns.regplot(filtered_data_transposed, x=filtered_data_transposed.index, y=filtered_data_transposed[country], label="Best Fit Line")  # plot best fit line
 
 ax.set_title('Temperature Change Over Time')
 ax.set_xlabel('Year')
