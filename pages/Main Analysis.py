@@ -90,8 +90,8 @@ df2.columns = new_columns
 
 #singleselect
 countries = df2['Country'].unique()
-default_countries = ["World"] if "World" in countries else [countries[0]]
-selected_country = st.selectbox('Select a Country', countries, index=countries.tolist().index(default_countries))
+default_country = "World" if "World" in countries else countries[0]
+selected_country = st.selectbox('Select a Country', countries, index=countries.tolist().index(default_country))
 
 #filter data based on selected country
 filtered_data = df2[df2['Country'] == selected_country]
@@ -111,6 +111,7 @@ for country in filtered_data_transposed.columns:
     sns.regplot(filtered_data_transposed,
             x=filtered_data_transposed.index,
             y=filtered_data_transposed[country],
+            scatter=False,
             label="Best Fit Line",
             color='peachpuff'
             )  # plot best fit line
@@ -135,5 +136,9 @@ st.write("From the graph, we can see that there is a positive change in temperat
 st.write("According to our research, rising temperatures from climate change force species beyond their thermal "
          "limits, causing habitat loss, disrupting ecological relationships, and increasing disease exposure, "
          "all of which contribute to higher extinction rates.")
+
+st.divider()
+
+##Next Factor
 
 
