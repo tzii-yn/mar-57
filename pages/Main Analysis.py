@@ -102,7 +102,7 @@ filtered_data_transposed.index = filtered_data_transposed.index.astype(int)
 
 #world temperature
 # world_data = df2[df2.Country == 'World'].loc[:,'F2010':'F2014']
-fig, ax = plt.subplots(figsize=(10, 6))
+fig1, ax = plt.subplots(figsize=(10, 6))
 
 for country in filtered_data_transposed.columns:
     ax.plot(filtered_data_transposed.index, filtered_data_transposed[country], label=country)
@@ -113,7 +113,7 @@ ax.set_ylabel('Temperature Change (°C)')
 ax.legend(title='Country', bbox_to_anchor=(1.05, 1), loc='upper left')
 ax.grid(True)
 
-st.pyplot(fig)
+st.pyplot(fig1)
 
 st.write("According to our research, rising temperatures from climate change force species beyond their thermal "
          "limits, causing habitat loss, disrupting ecological relationships, and increasing disease exposure, "
