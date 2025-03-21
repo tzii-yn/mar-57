@@ -113,7 +113,7 @@ for country in filtered_data_transposed.columns:
                 x=filtered_data_transposed.index,
                 y=filtered_data_transposed[country],
                 label="Best Fit Line",
-                color='linen'
+                color='peachpuff'
                 )  # plot best fit line
         count += 1
     else:
