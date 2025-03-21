@@ -89,4 +89,4 @@ filtered_data = df2[df2['Country'] == selected_country]
 #world temperature
 # world_data = df2[df2.Country == 'World'].loc[:,'F2010':'F2014']
 
-st.line_chart(data=filtered_data,x='Country', y=[1:], x_label='Year', y_label='Temperature')
+st.line_chart(data=filtered_data, x_label='Year', y_label='Temperature')
