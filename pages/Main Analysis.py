@@ -70,6 +70,7 @@ st.divider()
 
 st.subheader("Potential Factors")
 st.markdown("**Climate Change**")
+st.write("Experiment with the graph by selecting different countries!")
 
 #data from 1961, 2023
 df2 = pd.read_csv('data/Annual_Surface_Temperature_Change.csv')
@@ -126,8 +127,13 @@ ax.legend(title='Country', bbox_to_anchor=(1.05, 1), loc='upper left')
 ax.grid(True)
 
 st.pyplot(fig1)
+st.link_button(":small[:gray[Retrieved from IMF Climate Change Dashboard]]",
+  "https://climatedata.imf.org/pages/climatechange-data",
+  type="tertiary",
+  icon="➡️"
+  )
 
-st.write("From the graph, we can see that there is a positive change in temperature over time. This shows that "
+st.write("From the graph, we can see that there is a positive change in temperature over time overall. This shows that "
          "**temperatures have been rising**")
 st.write("According to our research, rising temperatures from climate change force species beyond their thermal "
          "limits, causing habitat loss, disrupting ecological relationships, and increasing disease exposure, "
