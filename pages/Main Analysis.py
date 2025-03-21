@@ -77,7 +77,15 @@ columns_to_remove = ['ObjectId', 'Indicator', 'ISO2', 'ISO3', 'Unit', 'Source', 
 df2 = df2.drop(columns=columns_to_remove)
 
 #remove F in the years
-df2.columns = df.columns.str.replace('F', '', regex=False)
+column_names = df2.columns
+new_columns = []
+for x in column_names:
+    if x == 'Country':
+        new_columns.append(x)  # Keep 'Country' as is
+    else:
+        new_columns.append(x.replace('F', ''))
+
+df2.columns = new_columns
 
 #dropdown to select country
 countries = df2['Country'].unique()
