@@ -91,14 +91,23 @@ df2.columns = new_columns
 countries = df2['Country'].unique()
 selected_country = st.multiselect('Select Countries', countries, default=countries[0])
 
-# Filter data based on selected country
+#filter data based on selected country
 filtered_data = df2[df2['Country'].isin(selected_country)]
 
-df2.transpose()
+#set country as index
+filtered_data_transposed = filtered_data.set_index('Country').T
+
+#convert years to int
+filtered_data_transposed.index = filtered_data_transposed.index.astype(int)
+
 #world temperature
 # world_data = df2[df2.Country == 'World'].loc[:,'F2010':'F2014']
-
-st.line_chart(data=filtered_data, x_label='Year', y_label='Temperature')
+plt.title('Temperature Change Over Time')
+plt.xlabel('Year')
+plt.ylabel('Temperature Change (°C)')
+plt.legend(title='Country', bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.grid(True)
+st.pyplot(plt)
 
 st.write("According to our research, rising temperatures from climate change force species beyond their thermal "
          "limits, causing habitat loss, disrupting ecological relationships, and increasing disease exposure, "
