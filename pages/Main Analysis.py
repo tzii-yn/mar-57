@@ -89,7 +89,8 @@ df2.columns = new_columns
 
 #multiselect
 countries = df2['Country'].unique()
-selected_country = st.multiselect('Select Countries', countries, default=countries[0])
+default_countries = ["World"] if "World" in countries else [countries[0]]
+selected_country = st.multiselect('Select Countries', countries, default=default_countries)
 
 #filter data based on selected country
 filtered_data = df2[df2['Country'].isin(selected_country)]
@@ -112,7 +113,7 @@ for country in filtered_data_transposed.columns:
                 x=filtered_data_transposed.index,
                 y=filtered_data_transposed[country],
                 label="Best Fit Line",
-                color='salmon'
+                color='linen'
                 )  # plot best fit line
         count += 1
     else:
@@ -131,3 +132,5 @@ st.write("From the graph, we can see that there is a positive change in temperat
 st.write("According to our research, rising temperatures from climate change force species beyond their thermal "
          "limits, causing habitat loss, disrupting ecological relationships, and increasing disease exposure, "
          "all of which contribute to higher extinction rates.")
+
+
