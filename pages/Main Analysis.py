@@ -112,7 +112,8 @@ ax.set_xlabel('Year')
 ax.set_ylabel('Temperature Change (°C)')
 ax.legend(title='Country', bbox_to_anchor=(1.05, 1), loc='upper left')
 ax.grid(True)
-ax.pyplot(fig)
+
+st.pyplot(fig)
 
 st.write("According to our research, rising temperatures from climate change force species beyond their thermal "
          "limits, causing habitat loss, disrupting ecological relationships, and increasing disease exposure, "
