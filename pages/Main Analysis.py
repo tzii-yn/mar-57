@@ -164,4 +164,11 @@ with coly:
 st.divider()
 
 st.subheader("Conclusion")
-st.write("In conclusion, the decline of endangered animals is a pressing issue driven by various human and environmental factors. Climate change, distruption of ecosystems due to invasive species habitat destruction for urbanisation have all contributed to the rapid decrease in wildlife populations. Our findings highlight the urgent need for conservation efforts, stricter regulations, and public awareness to protect these species from extinction. By addressing these threats and promoting sustainable practices, we can help preserve biodiversity and ensure a balanced ecosystem for future generations.")
+col3, col4 = st.columns([0.5, 0.5])
+with col3:
+    st.write(
+        "Regulatory Methods: \nProtected Areas: Establishing national parks and wildlife reserves. \nAnti-Poaching Laws: Stricter penalties and use of surveillance technology (e.g., drones, tracking systems). \nInternational Agreements: Enforcement of treaties like CITES to regulate wildlife trade.\nPublic Education & Community Involvement: Raising awareness and promoting sustainable practices."
+    )
+
+with col4:
+    st.write("In conclusion, the decline of endangered animals is a pressing issue driven by various human and environmental factors. Climate change, distruption of ecosystems due to invasive species habitat destruction for urbanisation have all contributed to the rapid decrease in wildlife populations. Our findings highlight the urgent need for conservation efforts, stricter regulations, and public awareness to protect these species from extinction. By addressing these threats and promoting sustainable practices, we can help preserve biodiversity and ensure a balanced ecosystem for future generations.")
