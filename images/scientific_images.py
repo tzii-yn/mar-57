@@ -25,17 +25,17 @@ images = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0DE1d10Ba780O_3uTSIlqbusgM_S6KjVQnA&s",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6yHhw9f2MxHMFFYqO9aIbsGcpYH-IJ5b1Hg&s",
   #here onwards is invalid, replace
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Horseshoe_crab.jpg/220px-Horseshoe_crab.jpg",  # MEROSTOMATA (Horseshoe crabs)
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Monoplacophoran.jpg/220px-Monoplacophoran.jpg",  # MONOPLACOPHORA (Monoplacophorans)
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Hagfish.jpg/220px-Hagfish.jpg",  # MYXINI (Hagfishes)
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Ribbon_worm.jpg/220px-Ribbon_worm.jpg",  # NEMERTEA (Ribbon worms)
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Ostracod.jpg/220px-Ostracod.jpg",  # OSTRACODA (Ostracods)
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Lamprey.jpg/220px-Lamprey.jpg",  # PETROMYZONTI (Lampreys)
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Polychaete.jpg/220px-Polychaete.jpg",  # POLYCHAETA (Polychaetes)
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Chiton.jpg/220px-Chiton.jpg",  # POLYPLACOPHORA (Chitons)
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Snake.jpg/220px-Snake.jpg",  # REPTILIA (Reptiles)
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Coelacanth.jpg/220px-Coelacanth.jpg",  # SARCOPTERYGII (Lobe-finned fishes)
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Solenogaster.jpg/220px-Solenogaster.jpg",  # SOLENOGASTRES (Solenogasters)
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Turbellarian.jpg/220px-Turbellarian.jpg",  # TURBELLARIA (Turbellarians)
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Velvet_worm.jpg/220px-Velvet_worm.jpg"  # UDEONYCHOPHORA (Velvet worms)
+  "https://lh6.googleusercontent.com/proxy/61Oe_3iwh9LRo7Of3-MJFj-NJ9B9gc-RxThN2NH6XYcSP1_nqHrovddQtxes_eUbnrWBOqSwI80SNwkZxji8x9-5V5Z6M3QrsemVfpf-WY1MJ6pbaXc",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmIPVAVT7jCnbDu3jNySytBjsTgcnVechakw&s",  # MONOPLACOPHORA (Monoplacophorans)
+  "https://theethogram.com/wp-content/uploads/2015/01/hagfish7.jpg",  # MYXINI (Hagfishes)
+  "https://inaturalist-open-data.s3.amazonaws.com/photos/4114/large.jpg",  # NEMERTEA (Ribbon worms)
+  "https://mapress.com/public/journals/1/article_51481_cover_en_US.jpg",  # OSTRACODA (Ostracods)
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShsnrz70owpDNhEpKl7JbZUIUhaKItSss_FA&s",  # PETROMYZONTI (Lampreys)
+  "https://thumbnail.nudipixel.net/4378.jpg",  # POLYCHAETA (Polychaetes)
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-5TzIbDfPdQzsThdvS-_gggktMurmywnLDA&s",  # POLYPLACOPHORA (Chitons)
+  "https://static3.depositphotos.com/1004137/189/i/450/depositphotos_1890119-stock-photo-iguana.jpg",  # REPTILIA (Reptiles)
+  "https://images.squarespace-cdn.com/content/5ab3d69f2487fdc541652970/1521771924519-0D89PRKEW0S5ZXKGHATM/image-asset.jpeg?content-type=image%2Fjpeg",  # SARCOPTERYGII (Lobe-finned fishes)
+  "https://inaturalist-open-data.s3.amazonaws.com/photos/177490134/original.jpg",  # SOLENOGASTRES (Solenogasters)
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPxz3I2vDkQ8gs3thkd2NfPSjNba0-9Q95zQ&s",  # TURBELLARIA (Turbellarians)
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMknz17PjEDgdAySGBQjcac0SeAXO3CoGNlg&s"  # UDEONYCHOPHORA (Velvet worms)
 ]
