@@ -104,14 +104,19 @@ filtered_data_transposed.index = filtered_data_transposed.index.astype(int)
 # world_data = df2[df2.Country == 'World'].loc[:,'F2010':'F2014']
 fig1, ax = plt.subplots(figsize=(10, 6))
 
+count = 0
 for country in filtered_data_transposed.columns:
     ax.plot(filtered_data_transposed.index, filtered_data_transposed[country], label=country)
-    sns.regplot(filtered_data_transposed,
+    if count == 1: #plot best fit line once
+        sns.regplot(filtered_data_transposed,
                 x=filtered_data_transposed.index,
                 y=filtered_data_transposed[country],
                 label="Best Fit Line",
-                color='midnightblue'
+                color='navy'
                 )  # plot best fit line
+        count += 1
+    else:
+        pass
 
 ax.set_title('Temperature Change Over Time')
 ax.set_xlabel('Year')
@@ -121,6 +126,8 @@ ax.grid(True)
 
 st.pyplot(fig1)
 
+st.write("From the graph, we can see that there is a positive change in temperature over time. This shows that "
+         "**temperatures have been rising**")
 st.write("According to our research, rising temperatures from climate change force species beyond their thermal "
          "limits, causing habitat loss, disrupting ecological relationships, and increasing disease exposure, "
          "all of which contribute to higher extinction rates.")
