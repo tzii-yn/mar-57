@@ -73,8 +73,20 @@ st.markdown("**Climate Change**")
 
 #data from 1961, 2023
 df2 = pd.read_csv('data/Annual_Surface_Temperature_Change.csv')
+columns_to_remove = ['ObjectId', 'Indicator', 'ISO2', 'ISO3', 'Unit', 'Source', 'CTS_Code', 'CTS_Name', 'CTS_Full_Descriptor']
+df2 = df2.drop(columns=columns_to_remove)
+
+#remove F in the years
+df2.columns = df.columns.str.replace('F', '', regex=False)
+
+#dropdown to select country
+countries = df2['Country'].unique()
+selected_country = st.selectbox('Select a Country', countries)
+
+# Filter data based on selected country
+filtered_data = df2[df2['Country'] == selected_country]
 
 #world temperature
-world_data = df2[df2.Country == 'World'].loc[:,'F2010':'F2014']
+# world_data = df2[df2.Country == 'World'].loc[:,'F2010':'F2014']
 
-st.line_chart(world_data, x_label='Year', y_label='Temperature')
+st.line_chart(data=filtered_data,x='Country', y=[1:], x_label='Year', y_label='Temperature')
