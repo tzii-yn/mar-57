@@ -98,7 +98,8 @@ chart = alt.Chart(melted_df).transform_calculate(
     href='url:N',  
     tooltip=['Name:N', 'Value:Q', 'url:N']  
 ).properties(
-    height=700  
+    height=700,
+    title="Various Threatened Species Data"
 ).add_params(
     selection  #add interactive legend
 )

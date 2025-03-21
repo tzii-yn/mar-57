@@ -67,6 +67,8 @@ with col2:
 
 st.divider()
 
+
 st.subheader("Potential Factors")
 st.markdown("**Climate Change**")
+
 
